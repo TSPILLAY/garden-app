@@ -18,10 +18,16 @@ def get_plant_advice(plant_type):
     return "No advice for this type of plant."
 
 
-# Hardcoded values for the season and plant type
-season = "summer"
-plant_type = "flower"
+def main():
+    # Prompt user for dynamic inputs
+    season = input("Enter current season (e.g., summer, winter): ").strip()
+    plant_type = input("Enter plant type (e.g., flower, vegetable): ").strip()
 
-# Generate and print advice
-advice = get_season_advice(season) + get_plant_advice(plant_type)
-print(advice)
+    # Generate and print advice
+    advice = get_season_advice(season) + get_plant_advice(plant_type)
+    print("\n--- Gardening Advice ---")
+    print(advice)
+
+
+if __name__ == "__main__":
+    main()
